@@ -2,9 +2,9 @@ package net.codedstingray.billinstale.api;
 
 import java.io.PrintStream;
 
-public interface IMessenger {
+public interface IMessageDisplay {
 
-    void printMsg(MessageType type, String message);
+    void displayMessage(MessageType type, String message);
 
     enum MessageType {
         COMMUNICATION(System.out, ""),
