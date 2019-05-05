@@ -1,6 +1,7 @@
 package net.codedstingray.billinstale;
 
 import net.codedstingray.billinstale.api.IMessenger.MessageType;
+import net.codedstingray.billinstale.api.IPlayerInputHandler;
 import net.codedstingray.billinstale.ui.ConsoleInputHandler;
 import net.codedstingray.billinstale.ui.ConsoleMessenger;
 
@@ -16,7 +17,7 @@ public class BillinsTale {
         msg.displayPlayerOptions("Go to the dark Forest", "Go to the high mountains", "Cry a river");
 
         ConsoleInputHandler inputHandler = new ConsoleInputHandler();
-        int input = inputHandler.getPlayerForkChoice();
+        IPlayerInputHandler.PlayerInput input = inputHandler.getPlayerInput();
         msg.printMsg(MessageType.COMMUNICATION, "Player input was: " + input);
     }
 }

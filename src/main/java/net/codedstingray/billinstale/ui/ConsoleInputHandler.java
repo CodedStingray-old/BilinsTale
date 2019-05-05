@@ -8,15 +8,17 @@ import java.io.InputStreamReader;
 
 public class ConsoleInputHandler implements IPlayerInputHandler {
     @Override
-    public int getPlayerForkChoice() {
+    public PlayerInput getPlayerInput() {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int result = 0;
-        boolean gotValidInput = false;
-        while(!gotValidInput) {
+        PlayerInput result = null;
+        boolean gotInput = false;
+        //this entire loop structure is only here to handle IOExceptions; making sure we got valid input
+        // is the problem of the caller
+        while(!gotInput) {
             try {
                 String input = reader.readLine();
-                result = Integer.parseInt(input);
-                gotValidInput = true;
+                result = PlayerInput.fromString(input);
+                gotInput = true;
             } catch (IOException e) {
                 e.printStackTrace();
             }
