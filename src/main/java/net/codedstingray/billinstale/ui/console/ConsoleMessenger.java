@@ -13,7 +13,7 @@ public class ConsoleMessenger implements IMessenger, IPlayerOptionsDisplay {
     public void displayPlayerOptions(String... options) {
         StringBuilder optionsMsgBuilder = new StringBuilder();
         for(int i = 0; i < options.length; i++) {
-            optionsMsgBuilder = optionsMsgBuilder.append(i+1).append(": ").append(options[i]).append("\n");
+            optionsMsgBuilder.append(i+1).append(": ").append(options[i]).append("\n");
         }
 
         System.out.print(optionsMsgBuilder); //toString implied in PrintStream#print
