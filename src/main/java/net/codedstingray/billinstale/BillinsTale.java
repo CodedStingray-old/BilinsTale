@@ -2,8 +2,8 @@ package net.codedstingray.billinstale;
 
 import net.codedstingray.billinstale.api.IMessenger.MessageType;
 import net.codedstingray.billinstale.api.IPlayerInputHandler;
-import net.codedstingray.billinstale.ui.ConsoleInputHandler;
-import net.codedstingray.billinstale.ui.ConsoleMessenger;
+import net.codedstingray.billinstale.ui.console.ConsoleInputHandler;
+import net.codedstingray.billinstale.ui.console.ConsoleMessenger;
 
 public class BillinsTale {
 

@@ -1,4 +1,4 @@
-package net.codedstingray.billinstale.ui;
+package net.codedstingray.billinstale.ui.console;
 
 import net.codedstingray.billinstale.api.IPlayerInputHandler;
 
