@@ -18,8 +18,8 @@ public class BillinsTale {
 //        IPlayerInputHandler.PlayerInput input = inputHandler.getPlayerInput();
 //        msg.displayMessage(MessageType.COMMUNICATION, "Player input was: " + input);
 
-        System.out.println("Hello World");
-
+        System.out.println("Welcome to Billins Tale");
+        System.out.println("Startup...");
 
         ConsoleMessageDisplay consoleMessageDisplay = new ConsoleMessageDisplay();
         ConsoleInputHandler consoleInputHandler = new ConsoleInputHandler();

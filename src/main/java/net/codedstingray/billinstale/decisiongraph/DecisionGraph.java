@@ -13,9 +13,12 @@ public class DecisionGraph {
     private GraphNode startNode;
     private Set<GraphNode> finalNodes = new HashSet<>();
 
-    private HashMap<Integer, GraphNode> allNodes;
+    private HashMap<Integer, GraphNode> allNodes = new HashMap<>();
 
     public GraphNode createNode(int id, String message) {
+        if(allNodes.get(id) != null)
+            throw new IllegalArgumentException("Node with id " + id + " already exists.");
+
         GraphNode node = new GraphNode(id, message);
         allNodes.put(id, node);
         return node;
@@ -32,6 +35,10 @@ public class DecisionGraph {
 
     public Set<GraphNode> getFinalNodes() {
         return finalNodes;
+    }
+
+    public boolean isFinalNode(GraphNode node) {
+        return finalNodes.contains(node);
     }
 
     //setters
