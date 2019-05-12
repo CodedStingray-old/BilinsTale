@@ -24,6 +24,7 @@ public class ConsoleMessageDisplay implements IMessageDisplay, IPlayerOptionsDis
         for(int i = 0; i < options.length; i++) {
             optionsMsgBuilder.append(i+1).append(": ").append(options[i]).append("\n");
         }
+        optionsMsgBuilder.append("exit: Exit the game\n");
 
         System.out.print(optionsMsgBuilder); //toString implied in PrintStream#print
     }
