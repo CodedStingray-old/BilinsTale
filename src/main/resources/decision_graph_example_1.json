@@ -1,0 +1,137 @@
+{
+  "startNode": 0,
+  "finalNodes": [
+    7, 8
+  ],
+  "nodes": [
+    {
+      "id": 0,
+      "text": "This is the Start Node",
+      "options": [
+        {
+          "text": "Choose Node 1",
+          "nextNode": 1,
+          "actions": [
+            {
+              "type": "setVariable",
+              "varname": "exampleVar1",
+              "value": 4
+            },
+            {
+              "type": "setFlag",
+              "varname": "exampleFlag1",
+              "value": true
+            }
+          ]
+        },
+        {
+          "text": "Choose Node 2",
+          "nextNode": 2
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "text": "This is Node 1",
+      "options": [
+        {
+          "text": "Choose Node 3",
+          "nextNode": 3
+        },
+        {
+          "text": "Choose Node 4",
+          "nextNode": 4
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "This is Node 2",
+      "options": [
+        {
+          "text": "Choose Node 4",
+          "nextNode": 4
+        },
+        {
+          "text": "Choose Node 5",
+          "nextNode": 5
+        },
+        {
+          "text": "Choose Node 6",
+          "nextNode": 6
+        }
+      ]
+    },
+    {
+      "id:": 3,
+      "text": "This is Node 3",
+      "options": [
+        {
+          "text": "Choose Node 5",
+          "nextNode": 5
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "This is Node 4",
+      "options": [
+        {
+          "consitions": [
+            {
+              "type": "flag",
+              "varname": "exampleFlag1",
+              "value": true
+            }
+          ],
+          "text": "Choose Final Node 1",
+          "nextNode": 7
+        },
+        {
+          "text": "Choose Node 3",
+          "nextNode": 3
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "This is Node 5",
+      "options": [
+        {
+          "text": "Choose Node 4",
+          "nextNode": 4
+        },
+        {
+          "text": "Choose Node 2",
+          "nextNode": 2
+        },
+        {
+          "text": "Choose Final Node 2",
+          "nextNode": 8
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "This is Node 6",
+      "options": [
+        {
+          "text": "Choose Final Node 1",
+          "nextNode": 7
+        },
+        {
+          "text": "Choose Final Node 2",
+          "nextNode": 8
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "This is Final Node 1"
+    },
+    {
+      "id": 8,
+      "text": "This is Final Node 2"
+    }
+  ]
+}
